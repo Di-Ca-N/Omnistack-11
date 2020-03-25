@@ -2,7 +2,7 @@ const connection = require("../database/connection");
 
 module.exports = {
   async create(request, response) {
-    const { ngo_id } = request.body;
+    const { id: ngo_id } = request.body;
 
     const ngo = await connection("ngos")
       .where("id", ngo_id)
